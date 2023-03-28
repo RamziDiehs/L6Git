@@ -11,9 +11,18 @@ def encodePass(data):
     for i in data:
         temp = int(i) + 3
         if temp > 9:
-            temp = temp % 10        
-	res = res + str(temp)
+            temp = temp % 10
+        res = res + str(temp)
     return res
+
+
+def decodePass(data):
+    res = ""
+    for i in data:
+        temp = str((int(i) - 3))
+        res += temp
+    return res
+        
 
 if __name__ == "__main__":
     while True:
